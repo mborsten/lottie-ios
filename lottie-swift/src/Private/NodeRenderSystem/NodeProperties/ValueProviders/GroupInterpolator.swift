@@ -23,10 +23,10 @@ class GroupInterpolator<ValueType>: AnyValueProvider where ValueType: Interpolat
     return false
   }
   
-  func value(frame: CGFloat) -> Any {
+  func valueForFrame(_ frame: CGFloat) -> Any {
     var output = [ValueType]()
     for interpolator in keyframeInterpolators {
-      output.append(interpolator.value(frame: frame) as! ValueType)
+      output.append(interpolator.valueForFrame(frame) as! ValueType)
     }
     return output
   }

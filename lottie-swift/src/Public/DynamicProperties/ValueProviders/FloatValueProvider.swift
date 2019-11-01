@@ -46,7 +46,7 @@ public final class FloatValueProvider: AnyValueProvider {
     return hasUpdate
   }
   
-  public func value(frame: CGFloat) -> Any {
+  public func valueForFrame(_ frame: CGFloat) -> Any {
     hasUpdate = false
     let newCGFloat: CGFloat
     if let block = block {

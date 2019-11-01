@@ -113,9 +113,9 @@ class TextCompositionLayer: CompositionLayer {
     let animatorUpdate = rootNode?.updateContents(frame, forceLocalUpdate: forceUpdates) ?? false
     guard documentUpdate == true || animatorUpdate == true else { return }
     
-    let text = textDocument.value(frame: frame) as! TextDocument
-    let anchorPoint = interpolatableAnchorPoint?.value(frame: frame) as! Vector3D
-    let scale = interpolatableScale?.value(frame: frame) as! Vector3D
+    let text = textDocument.valueForFrame(frame) as! TextDocument
+    let anchorPoint = interpolatableAnchorPoint?.valueForFrame(frame) as! Vector3D
+    let scale = interpolatableScale?.valueForFrame(frame) as! Vector3D
     rootNode?.rebuildOutputs(frame: frame)
     
     let fillColor = rootNode?.textOutputNode.fillColor ?? text.fillColorData.cgColorValue

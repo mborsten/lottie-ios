@@ -25,5 +25,5 @@ public protocol AnyValueProvider {
   func hasUpdate(frame: AnimationFrameTime) -> Bool
   
   /// Asks the provider to update the container with its value for the frame.
-  func value(frame: AnimationFrameTime) -> Any
+  func valueForFrame(_ frame: AnimationFrameTime) -> Any
 }

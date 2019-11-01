@@ -65,7 +65,7 @@ class AnimationContainer: CALayer {
     for layer in animationLayers {
       if let foundProperties = layer.nodeProperties(for: keypath),
         let first = foundProperties.first {
-        return first.valueProvider.value(frame: atFrame ?? currentFrame)
+        return first.valueProvider.valueForFrame(atFrame ?? currentFrame)
       }
     }
     return nil

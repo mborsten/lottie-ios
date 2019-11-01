@@ -29,7 +29,7 @@ class SingleValueProvider<ValueType>: AnyValueProvider {
     return hasUpdate
   }
   
-  func value(frame: CGFloat) -> Any {
+  func valueForFrame(_ frame: CGFloat) -> Any {
     hasUpdate = false
     return value
   }

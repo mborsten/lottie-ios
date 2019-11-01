@@ -25,7 +25,7 @@ class NodeProperty<T>: AnyNodeProperty {
   
   init(provider: AnyValueProvider) {
     self.valueProvider = provider
-    self.typedContainer = ValueContainer<T>(provider.value(frame: 0) as! T)
+    self.typedContainer = ValueContainer<T>(provider.valueForFrame(0) as! T)
     self.typedContainer.setNeedsUpdate()
   }
   
@@ -40,7 +40,7 @@ class NodeProperty<T>: AnyNodeProperty {
   }
   
   func update(frame: CGFloat) {
-    typedContainer.setValue(valueProvider.value(frame: frame), forFrame: frame)
+    typedContainer.setValue(valueProvider.valueForFrame(frame), forFrame: frame)
   }
   
   fileprivate var typedContainer: ValueContainer<T>

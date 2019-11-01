@@ -45,7 +45,7 @@ public final class PointValueProvider: AnyValueProvider {
     return hasUpdate
   }
   
-  public func value(frame: CGFloat) -> Any {
+  public func valueForFrame(_ frame: CGFloat) -> Any {
     hasUpdate = false
     let newPoint: CGPoint
     if let block = block {

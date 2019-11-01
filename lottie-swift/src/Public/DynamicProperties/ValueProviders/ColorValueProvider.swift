@@ -47,7 +47,7 @@ public final class ColorValueProvider: AnyValueProvider {
     return hasUpdate
   }
   
-  public func value(frame: CGFloat) -> Any {
+  public func valueForFrame(_ frame: CGFloat) -> Any {
     hasUpdate = false
     let newColor: Color
     if let block = block {
